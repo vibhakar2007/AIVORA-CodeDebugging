@@ -1,0 +1,38 @@
+import turtle
+import os
+
+def drawSquare():
+    screen = turtle.Screen()
+    t = turtle.Turtle()
+    t.speed(0)
+    with open("coords.txt", "r") as file:
+        coords = file.readlines()
+
+    points = []
+
+    for line in coords:
+        x, y = line.strip().split(",")
+        points.append((int(x), int(y)))
+
+    t.penup()
+    t.goto(points[0])
+    t.pendown()
+
+    for point in points[1:]:
+        t.goto(point)
+
+    t.goto(points[0])
+
+    screen.mainloop()
+    
+def callDrawer():
+    # os.system("type drawer.txt")
+    
+    with open("drawer.txt", "r") as file:
+        code = f"""{file.read()}"""
+    # print(code)
+    exec(code)
+
+if __name__ == "__main__":
+    drawSquare()
+    callDrawer()

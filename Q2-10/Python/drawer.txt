@@ -1,0 +1,21 @@
+import matplotlib.pyplot as plt
+
+points = [
+    (0, 0),
+    (300, 0),
+    (300, 300),
+    (0, 300)
+]
+
+x = [point[0] for point in points]
+y = [point[1] for point in points]
+
+x.append(points[0][0])
+y.append(points[0][1])
+
+plt.plot(x, y)
+
+plt.gca().set_aspect('equal')
+
+plt.title("Bigger Square")
+plt.show()
