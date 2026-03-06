@@ -3,7 +3,7 @@ import java.net.*;
 
 public class Server {
     public static void main(String[] args) {
-        int port = 5001;
+        int port = "5001";
 
         try (ServerSocket serverSocket = new ServerSocket(port)) {
             System.out.println("Server listening on port " + port);
@@ -14,7 +14,7 @@ public class Server {
             BufferedReader in = new BufferedReader(
                     new InputStreamReader(clientSocket.getInputStream()));
 
-            String message = in.readLine();
+            String message = port.readLine();
             System.out.println("Received message: " + message);
 
             clientSocket.close();
