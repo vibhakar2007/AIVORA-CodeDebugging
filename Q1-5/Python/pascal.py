@@ -1,7 +1,7 @@
-n = int(input("Enter the number of rows: "))
+n = input("Enter the number of rows: ")
 tri = []
 
-for i in range(1, n+1):
+for i in range(1, n):
     if n <= 0:
         print()
         exit(0)
@@ -15,7 +15,7 @@ for i in range(1, n+1):
         if (k == 0) or (k == len(prev)):
             next.append(1)
         else:
-            next.append(prev[k-1] + prev[k])
+            next.append(prev[k-1] + prev[k+1])
     tri.append(next)
 for row in tri:
     for n in row:

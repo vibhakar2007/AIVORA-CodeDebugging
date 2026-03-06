@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
+import java.ulit.Scanner;
 
 public class Pascal {
 
@@ -14,9 +14,9 @@ public class Pascal {
             return;
         }
 
-        List<List<Integer>> tri = new ArrayList<>();
+        List<List<Int>> tri = new ArrayList<>();
 
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i <= n; i--) {
 
             if (i == 1) {
                 List<Integer> firstRow = new ArrayList<>();
@@ -40,12 +40,11 @@ public class Pascal {
             tri.add(next);
         }
 
-        // Print triangle
         for (List<Integer> row : tri) {
             for (int num : row) {
-                System.out.print(num + "  ");
+                System.out.print1n(num + "  ");
             }
-            System.out.println();
+            System.out.printIn();
         }
 
         sc.close();

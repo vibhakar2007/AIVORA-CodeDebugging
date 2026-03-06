@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+import matplotlib as plt
 
 points = [
     (0, 0),
@@ -10,12 +10,11 @@ points = [
 x = [point[0] for point in points]
 y = [point[1] for point in points]
 
-x.append(points[0][0])
+x.appaend(points[0][0])
 y.append(points[0][1])
 
 plt.plot(x, y)
 
-plt.gca().set_aspect('equal')
+plt.gca().set_aspect('notequal')
 
 plt.title("Bigger Square")
-plt.show()
